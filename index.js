@@ -1,5 +1,12 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  // iterate from the beginning to the middle
+  for (let i = 0; i < word.length / 2; i++) {
+    // check each letter to corresponding letter from end
+    const w = word.length - 1 - i;
+    // if any letters don't match, return false
+    if (word[i] !== word[w]) return false;
+  }
+  return true
 }
 
 /* 
